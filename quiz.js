@@ -72,15 +72,22 @@ function clearoption() {
     for (let i = 0; i < radioes.length; i++)
         if (radioes[i].checked === true) {
             radioes[i].checked = false
+           
+            // if (Number(radioes[i].value) === questions[questionNumber - 1].a) {
+            //     score.innerHTML = marks++;
+            // }
         }
 }
 
 
 function showAnswer() {
     for (let i = 0; i < radioes.length; i++)
+        if (radioes[i].checked === true) {
+   
         if (Number(radioes[i].value) === questions[questionNumber - 1].a) {
             score.innerHTML = marks++;
         }
+    }
 
 
 }
