@@ -2,7 +2,7 @@ const ques =  document.querySelector(".ques")
 const radioes = document.querySelectorAll(".option")
 const lables = document.querySelectorAll("label")
 let questionNumber = 1;
- let score = [ ]
+ let score = document.querySelector(".score")
 
 // console.log(lables)
 console.log(radioes)
@@ -48,7 +48,7 @@ const questions = [
             optionChanges();
             clearoption();
    }
-  },1000)
+  },5000)
 
 function optionChanges() {
   for( let i= 0; i<questions.length; i++ ){
@@ -73,3 +73,11 @@ if ( radioes[i].checked === true) {
   }
 
 
+function showAnswer() {
+if ( Number(radioes[i].value) ===questions[questionNumber-1].a)
+{
+    score.innerHTML = +1;
+}
+
+
+}
